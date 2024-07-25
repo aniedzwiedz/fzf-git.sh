@@ -70,11 +70,12 @@ if [[ $# -eq 1 ]]; then
     git log --date=short --format="%C(green)%C(bold)%cd %C(auto)%h%d %s (%an)" --graph --color=$(__fzf_git_color) "$@"
   }
   case "$1" in
+    # branches)
+    #   # echo $'CTRL-O (open in browser) ╱ ALT-A (show all branches)\n'
+    #   echo $'CTRL-O (open in browser)\n'
+    #   branches
+    #   ;;
     branches)
-      echo $'CTRL-O (open in browser) ╱ ALT-A (show all branches)\n'
-      branches
-      ;;
-    all-branches)
       echo $'CTRL-O (open in browser)\n'
       branches -a
       ;;
